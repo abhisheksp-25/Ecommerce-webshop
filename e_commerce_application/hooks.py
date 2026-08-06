@@ -247,3 +247,56 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+doc_events = {
+    "Employee": {
+        "validate": "e_commerce_application.e_commerce_application.custom_scripts.employee.employee.validate",
+        "on_update": "e_commerce_application.e_commerce_application.custom_scripts.employee.employee.after_save",
+    },
+
+    "Task": {
+        "validate": "e_commerce_application.e_commerce_application.custom_scripts.task.task.validate"
+    },
+
+    
+    "User": {
+        "after_insert": "e_commerce_application.e_commerce_application.custom_scripts.user.user.after_insert"
+    },
+
+    "Quotation": {
+        "on_submit":"e_commerce_application.e_commerce_application.custom_scripts.quotation.quotation.create_sales_order"
+    },
+
+
+    "Address": {
+        "validate": "e_commerce_application.e_commerce_application.custom_scripts.address.address.validate"
+    },
+
+    "Sales Order": {
+    "before_insert": "e_commerce_application.e_commerce_application.custom_scripts.sales_order.sales_order.assign_supplier",
+    "on_submit": "e_commerce_application.e_commerce_application.custom_scripts.sales_order.sales_order.create_delivery_note"
+    },
+
+    "Delivery Note": {
+        "on_submit": "e_commerce_application.e_commerce_application.custom_scripts.delivery_note.delivery_note.create_sales_invoice"
+    },
+
+    "Sales Invoice": {
+        "on_submit": "e_commerce_application.e_commerce_application.custom_scripts.sales_invoice.sales_invoice.create_payment_entry"
+    },
+
+    "Supplier Inquiry": {
+        "after_insert": "e_commerce_application.e_commerce_application.custom_scripts.supplier.supplier_inquiry.process_new_inquiry",
+    },
+
+    "Supplier Registration": {
+    "before_insert": "e_commerce_application.e_commerce_application.custom_scripts.supplier.supplier_registration.validate_registration_token",
+    "after_insert": "e_commerce_application.e_commerce_application.custom_scripts.supplier.supplier_registration.mark_token_consumed",
+    }
+
+}
+
+
+doctype_js = {
+    "Employee": "public/js/employee.js"
+}
+

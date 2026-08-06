@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-07-26 20:16:45.106311",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "email_address",
+  "mobile_number",
+  "company_name",
+  "business__trade_name",
+  "supplier_category",
+  "type_of_products_supplied",
+  "gst_number",
+  "message__notes",
+  "status",
+  "registration_token",
+  "token_expires_on",
+  "email_sent",
+  "registration_completed",
+  "created_user",
+  "created_supplier"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Address",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "business__trade_name",
+   "fieldtype": "Data",
+   "label": "Business / Trade Name"
+  },
+  {
+   "fieldname": "supplier_category",
+   "fieldtype": "Link",
+   "label": "Supplier Category",
+   "options": "Supplier Group"
+  },
+  {
+   "fieldname": "type_of_products_supplied",
+   "fieldtype": "Small Text",
+   "label": "Type of Products Supplied"
+  },
+  {
+   "fieldname": "gst_number",
+   "fieldtype": "Data",
+   "label": "GST Number"
+  },
+  {
+   "fieldname": "message__notes",
+   "fieldtype": "Text",
+   "label": "Message / Notes"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nUser Created\nEmail Sent\nEmail Failed\nRegistration Completed\nRejected"
+  },
+  {
+   "fieldname": "registration_token",
+   "fieldtype": "Data",
+   "label": "Registration Token",
+   "read_only": 1
+  },
+  {
+   "fieldname": "token_expires_on",
+   "fieldtype": "Datetime",
+   "label": "Token Expires On",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "email_sent",
+   "fieldtype": "Check",
+   "label": "Email Sent",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "registration_completed",
+   "fieldtype": "Check",
+   "label": "Registration Completed"
+  },
+  {
+   "fieldname": "created_user",
+   "fieldtype": "Link",
+   "label": "Created User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_supplier",
+   "fieldtype": "Link",
+   "label": "Created Supplier",
+   "options": "Supplier",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-26 20:41:38.101292",
+ "modified_by": "Administrator",
+ "module": "E Commerce Application",
+ "name": "Supplier Inquiry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
