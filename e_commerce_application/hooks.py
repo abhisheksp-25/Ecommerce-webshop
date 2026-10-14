@@ -252,7 +252,7 @@ doc_events = {
         "validate": "e_commerce_application.e_commerce_application.custom_scripts.employee.employee.validate",
         "on_update": "e_commerce_application.e_commerce_application.custom_scripts.employee.employee.after_save",
     },
-
+    
     "Task": {
         "validate": "e_commerce_application.e_commerce_application.custom_scripts.task.task.validate"
     },
